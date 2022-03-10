@@ -1,4 +1,5 @@
 import validador from "./validador";
+import validadorDescrip from "./validarDescripcion";
 
 const tittle = document.querySelector("#titulo-post");
 const descip = document.querySelector("#descripcion-post");
@@ -11,5 +12,6 @@ form.addEventListener("submit", (event) => {
   const titulo = tittle.value;
   const ti = validador(titulo);
   const descripcion = descip.value;
-  div.innerHTML = "<p> Titulo: " +  ti + " Descripción: "+ descripcion+ "</p>";
+  const de = validadorDescrip(descripcion);
+  div.innerHTML = "<p> Titulo: " +  ti + " Descripción: "+ de+ "</p>";
 });
